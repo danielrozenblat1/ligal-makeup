@@ -1,0 +1,281 @@
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* רקע לבן שמנת עדין ולינארי */
+    background: linear-gradient(135deg, 
+        #FEFCFA 0%,      /* לבן שמנת עדין מאוד */
+        #FDF9F5 25%,     /* לבן שמנת קל */
+        #FCF6F0 50%,     /* שמנת רכה */
+        #FBF4ED 75%,     /* שמנת עדינה */
+        #FAF2EA 100%     /* שמנת חמימה עדינה */
+    );
+}
+  
+.description {
+    font-size: 1.2rem;
+    font-family: "AssistantR";
+    text-align: center;
+    margin: 1% auto;
+    direction: rtl;
+    font-weight: 300;
+    width: 90%;
+       background: linear-gradient(45deg, 
+        #F5E6D3 0%,      /* שמנת חמה */
+        #E6C2A6 10%,     /* בז' רך */
+        #F0E5D0 20%,     /* פנינה קרמית */
+        #D4B896 30%,     /* חום בז' זהוב */
+        #F7F0E8 40%,     /* שמנת פנינה */
+        #C8A882 50%,     /* חום קפה בלונד */
+        #F2E8DC 60%,     /* בז' פנינה */
+        #E0C097 70%,     /* חום דבש */
+        #F8F3ED 80%,     /* שמנת מוקה */
+        #DCC9A0 90%,     /* בז' זהוב עדין */
+        #F5E6D3 100%     /* שמנת חמה */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+  
+.imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+}
+  
+.backgroundImage {
+    flex: 1;
+    height: 100%;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+  
+.leftImage, .rightImage {
+    /* הסרת התמונות בצדדים - רקע שקוף */
+    background: transparent;
+}
+  
+.centerImage {
+    background-image: url('../images/ליגל\ גרבי\ תמונה\ מרכזית.png');
+    /* הרחבת התמונה המרכזית */
+    flex: 1.5;
+}
+  
+.contentBox {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 1rem;
+    width: 90%;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    z-index: 1;
+    margin-bottom: 3%;
+    box-shadow: 
+        0 4px 30px rgba(0, 0, 0, 0.1),
+        inset 0 0 20px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+  
+.title {
+    font-family: 'Comorant', serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    background: linear-gradient(45deg, 
+        #F5E6D3 0%,      /* שמנת חמה */
+        #E6C2A6 10%,     /* בז' רך */
+        #F0E5D0 20%,     /* פנינה קרמית */
+        #D4B896 30%,     /* חום בז' זהוב */
+        #F7F0E8 40%,     /* שמנת פנינה */
+        #C8A882 50%,     /* חום קפה בלונד */
+        #F2E8DC 60%,     /* בז' פנינה */
+        #E0C097 70%,     /* חום דבש */
+        #F8F3ED 80%,     /* שמנת מוקה */
+        #DCC9A0 90%,     /* בז' זהוב עדין */
+        #F5E6D3 100%     /* שמנת חמה */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+
+    
+    animation: shimmer 40s infinite linear;
+    background-size: 300% auto;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Media Queries מעודכנות לטלפונים */
+@media (max-width: 350px) {
+    .leftImage, .rightImage {
+        display: none; /* מסתיר תמונות צד במסכים קטנים */
+    }
+    .centerImage {
+        flex: 1; /* התמונה המרכזית תופסת את כל הרוחב */
+    }
+    .contentBox {
+        padding: 0.5rem;
+        width: 90%;
+        bottom: 0%;
+    }
+    .title {
+        font-size: 2.2rem;
+    }
+}
+  
+@media (min-width: 350px) and (max-width: 549px) {
+    .leftImage, .rightImage {
+        display: none; /* מסתיר תמונות צד במסכי טלפון */
+    }
+    .centerImage {
+        flex: 1; /* התמונה המרכזית תופסת את כל הרוחב */
+    }
+    .contentBox {
+        padding: 1.5rem 0.7rem;
+        width: 90%;
+        bottom: 3%;
+    }
+    .title {
+        font-size: 2.6rem;
+    }
+}
+  
+@media (min-width: 450px) and (max-width: 549px) {
+    .leftImage, .rightImage {
+        display: none; /* מסתיר תמונות צד במסכי טלפון */
+    }
+    .centerImage {
+        flex: 1; /* התמונה המרכזית תופסת את כל הרוחב */
+    }
+    .contentBox {
+        padding: 1.5rem;
+        width: 85%;
+        bottom: 3%;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+}
+  
+@media (min-width: 550px) and (max-width: 649px) {
+    .leftImage, .rightImage {
+        display: none; /* מסתיר תמונות צד במסכים עד 650px */
+    }
+    .centerImage {
+        flex: 1; /* התמונה המרכזית תופסת את כל הרוחב */
+    }
+    .contentBox {
+        padding: 1.8rem;
+        width: 80%;
+        bottom: 3%;
+    }
+    .title {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+    }
+}
+  
+@media (min-width: 650px) and (max-width: 750px) {
+    .leftImage, .rightImage {
+        display: none; /* מסתיר תמונות צד במסכים עד 750px */
+    }
+    .centerImage {
+        flex: 1; /* התמונה המרכזית תופסת את כל הרוחב */
+    }
+    .contentBox {
+        padding: 2rem;
+        width: 75%;
+        bottom: 3%;
+    }
+    .title {
+        font-size: 2.6rem;
+    }
+}
+  
+@media (min-width: 751px) {
+    .leftImage {
+        /* אין צורך להציג תמונות בצדדים */
+        display: block;
+        background: transparent;
+    }
+    .rightImage {
+        display: block;
+        background: transparent;
+    }
+    .centerImage {
+        flex: 1.5; /* חזרה לגודל הרגיל במסכים גדולים יותר */
+    }
+    .contentBox {
+        width: 70%;
+        bottom: 3%;
+    }
+    .title {
+        font-size: 2.8rem;
+    }
+}
+  
+@media (min-width: 851px) {
+    .contentBox {
+        width: 65%;
+        bottom: 3%;
+    }
+}
+  
+@media (min-width: 950px) {
+    .contentBox {
+        width: 60%;
+        bottom: 15%;
+    }
+    .title {
+        font-size: 3rem;
+    }
+}
+  
+@media (min-width: 1050px) {
+    .contentBox {
+        width: 30%;
+        bottom: 20%;
+    }
+}
+  
+@media (min-width: 1150px) {
+    .title {
+        font-size: 3rem;
+    }
+    .contentBox {
+        width: 33%;
+        bottom: -5%;
+    }
+}

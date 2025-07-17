@@ -1,0 +1,36 @@
+.title {
+  font-size: 2.5rem;
+  font-family: "Assistant", sans-serif;
+  text-align: center;
+  margin: 2% auto;
+  direction: rtl;
+  width: 100%;
+  font-weight: 800;
+}
+
+.description {
+    font-family: "AssistantR", sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 1rem auto 1rem;
+    line-height: 1.4;
+    max-width: 92%;
+    direction: rtl;
+    position: relative;
+    letter-spacing: -0.5px;
+    padding: 0 1rem;
+    z-index: 1;
+    transition: all 0.5s ease;
+    word-wrap: break-word;
+}
+.sectionTitle {
+   font-family: "Assistant", sans-serif;
+   font-size: 1.5rem;
+   text-align: center;
+   margin: 1rem auto ;
+   direction: rtl;
+   width: 100%;
+   font-weight: 700;
+
+}
+

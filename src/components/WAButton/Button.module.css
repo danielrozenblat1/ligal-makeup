@@ -1,0 +1,286 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% auto;
+    width: 100%;
+}
+
+.button {
+    position: relative;
+    /* גרדיאנט עדין של שמנת וחום בהיר */
+    background: linear-gradient(
+        135deg,
+        rgba(255, 248, 240, 0.45) 0%,    /* שמנת בהירה */
+        rgba(250, 240, 230, 0.4) 15%,    /* שמנת חמה */
+        rgba(245, 235, 225, 0.42) 30%,   /* חום בהיר עדין */
+        rgba(252, 245, 235, 0.38) 45%,   /* שמנת רכה */
+        rgba(240, 230, 220, 0.4) 60%,    /* חום בהיר */
+        rgba(248, 242, 235, 0.36) 75%,   /* שמנת עדינה */
+        rgba(245, 238, 230, 0.4) 90%,    /* חום בהיר רך */
+        rgba(255, 250, 245, 0.35) 100%   /* שמנת פנינה */
+    );
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(240, 230, 220, 0.5);
+    color: #4a3d32;
+    padding: 20px 60px; /* הרחבה של הכפתור */
+    font-size: 1.3rem;
+    font-family: "AssistantR", sans-serif;
+    direction: rtl;
+    border-radius: 15px;
+    margin:2% auto;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 280px; /* רוחב מינימלי */
+    width: auto;
+    
+    /* צל עדין עם צבעי שמנת וחום בהיר */
+    box-shadow: 
+        0 4px 12px rgba(80, 60, 40, 0.08),
+        inset 0 4px 12px rgba(255, 250, 245, 0.8),
+        inset 0 -4px 8px rgba(240, 230, 220, 0.6),
+        inset 4px 0 8px rgba(248, 242, 235, 0.5),
+        inset -4px 0 8px rgba(245, 238, 230, 0.5),
+        inset 0 0 20px rgba(252, 245, 235, 0.4);
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 250, 245, 0.7) 0%,     /* שמנת עליונה */
+        rgba(252, 245, 235, 0.5) 25%,    /* שמנת רכה */
+        rgba(248, 242, 235, 0.4) 50%,    /* שמנת עדינה */
+        rgba(245, 238, 230, 0.35) 75%,   /* חום בהיר */
+        rgba(250, 240, 230, 0.3) 100%    /* שמנת חמה */
+    );
+    pointer-events: none;
+    border-radius: 25px 25px 0 0;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 250, 245, 0.55) 0%,    /* שמנת מוארת */
+        rgba(252, 245, 235, 0.5) 15%,    /* שמנת רכה מוארת */
+        rgba(248, 242, 235, 0.52) 30%,   /* שמנת עדינה מוארת */
+        rgba(245, 238, 230, 0.48) 45%,   /* חום בהיר מואר */
+        rgba(240, 230, 220, 0.5) 60%,    /* חום בהיר מואר */
+        rgba(250, 240, 230, 0.46) 75%,   /* שמנת חמה מוארת */
+        rgba(255, 248, 240, 0.52) 90%,   /* שמנת בהירה מוארת */
+        rgba(252, 248, 242, 0.48) 100%   /* שמנת זהובה */
+    );
+    border-color: rgba(245, 238, 230, 0.7);
+    color: #3a2d22;
+    box-shadow: 
+        0 6px 20px rgba(80, 60, 40, 0.12),
+        inset 0 6px 16px rgba(255, 250, 245, 0.9),
+        inset 0 -6px 12px rgba(235, 225, 210, 0.7),
+        inset 6px 0 12px rgba(248, 242, 235, 0.6),
+        inset -6px 0 12px rgba(245, 238, 230, 0.6),
+        inset 0 0 25px rgba(252, 245, 235, 0.5);
+}
+
+.button:active {
+    transform: translateY(0);
+    background: linear-gradient(
+        135deg,
+        rgba(240, 230, 220, 0.4) 0%,     /* חום בהיר עמוק */
+        rgba(245, 238, 230, 0.38) 15%,   /* חום בהיר עמוק */
+        rgba(248, 242, 235, 0.42) 30%,   /* שמנת עדינה עמוקה */
+        rgba(250, 240, 230, 0.36) 45%,   /* שמנת חמה עמוקה */
+        rgba(252, 245, 235, 0.4) 60%,    /* שמנת רכה עמוקה */
+        rgba(245, 235, 225, 0.38) 75%,   /* חום בהיר עמוק */
+        rgba(255, 248, 240, 0.42) 90%,   /* שמנת בהירה עמוקה */
+        rgba(248, 240, 232, 0.36) 100%   /* שמנת עמוקה */
+    );
+    color: #4a3d32;
+    box-shadow: 
+        0 2px 8px rgba(80, 60, 40, 0.06),
+        inset 0 8px 20px rgba(60, 45, 30, 0.15),
+        inset 0 4px 12px rgba(230, 220, 205, 0.7),
+        inset 4px 0 12px rgba(240, 230, 220, 0.6),
+        inset -4px 0 12px rgba(245, 238, 230, 0.6),
+        inset 0 0 30px rgba(248, 242, 235, 0.5);
+}
+
+.buttonContent {
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 3px rgba(255, 250, 245, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* אנימציית ברק זכוכית עדינה */
+.shine {
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(255, 250, 245, 0) 25%,      /* שמנת שקופה */
+        rgba(252, 245, 235, 0.6) 35%,    /* שמנת רכה זוהרת */
+        rgba(248, 242, 235, 0.7) 42%,    /* שמנת עדינה זוהרת */
+        rgba(245, 238, 230, 0.8) 50%,    /* חום בהיר זוהר */
+        rgba(250, 240, 230, 0.7) 58%,    /* שמנת חמה זוהרת */
+        rgba(255, 248, 240, 0.6) 65%,    /* שמנת בהירה זוהרת */
+        rgba(240, 230, 220, 0) 75%,      /* חום בהיר שקוף */
+        transparent 100%
+    );
+    transform: rotate(30deg);
+    animation: creamShine 12s infinite ease-in-out;
+    pointer-events: none;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+@keyframes creamShine {
+    0% {
+        transform: translate(-150%, -150%) rotate(30deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.6;
+    }
+    85% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(150%, 150%) rotate(30deg);
+        opacity: 0;
+    }
+}
+
+.button:hover .shine {
+    animation-duration: 6s;
+    opacity: 0.8;
+}
+
+/* רספונסיבי - מתחת ל-480px */
+@media (max-width: 480px) {
+    .center {
+        margin: 1.5% auto;
+        padding: 0 15px;
+    }
+    
+    .button {
+        padding: 16px 40px;
+        font-size: 1.1rem;
+        min-width: 250px;
+        border-radius: 20px;
+        backdrop-filter: blur(22px);
+        -webkit-backdrop-filter: blur(22px);
+        box-shadow: 
+            0 3px 10px rgba(80, 60, 40, 0.07),
+            inset 0 3px 10px rgba(255, 250, 245, 0.75),
+            inset 0 -3px 6px rgba(240, 230, 220, 0.55),
+            inset 3px 0 6px rgba(248, 242, 235, 0.45),
+            inset -3px 0 6px rgba(245, 238, 230, 0.45),
+            inset 0 0 18px rgba(252, 245, 235, 0.35);
+    }
+    
+    .button::before {
+        border-radius: 20px 20px 0 0;
+    }
+    
+    .buttonContent {
+        font-weight: 550;
+        letter-spacing: 0.3px;
+    }
+    
+    .shine {
+        animation: creamShine 14s infinite ease-in-out;
+    }
+}
+
+/* רספונסיבי - מתחת ל-320px */
+@media (max-width: 320px) {
+    .center {
+        margin: 1% auto;
+        padding: 0 10px;
+    }
+    
+    .button {
+        padding: 14px 30px;
+        font-size: 1rem;
+        min-width: 220px;
+        border-radius: 18px;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 
+            0 2px 8px rgba(80, 60, 40, 0.06),
+            inset 0 2px 8px rgba(255, 250, 245, 0.7),
+            inset 0 -2px 5px rgba(240, 230, 220, 0.5),
+            inset 2px 0 5px rgba(248, 242, 235, 0.4),
+            inset -2px 0 5px rgba(245, 238, 230, 0.4),
+            inset 0 0 15px rgba(252, 245, 235, 0.3);
+    }
+    
+    .button::before {
+        border-radius: 18px 18px 0 0;
+    }
+    
+    .buttonContent {
+        font-weight: 500;
+        letter-spacing: 0.2px;
+    }
+    
+    .shine {
+        animation: creamShine 16s infinite ease-in-out;
+    }
+}
+
+/* התאמות נוספות להובר במצבים רספונסיביים */
+@media (max-width: 480px) {
+    .button:hover {
+        transform: translateY(-1px);
+        box-shadow: 
+            0 4px 16px rgba(80, 60, 40, 0.1),
+            inset 0 4px 14px rgba(255, 250, 245, 0.85),
+            inset 0 -4px 8px rgba(235, 225, 210, 0.65),
+            inset 4px 0 8px rgba(248, 242, 235, 0.55),
+            inset -4px 0 8px rgba(245, 238, 230, 0.55),
+            inset 0 0 22px rgba(252, 245, 235, 0.45);
+    }
+    
+    .button:hover .shine {
+        animation-duration: 7s;
+    }
+}
+
+@media (max-width: 320px) {
+    .button:hover {
+        transform: translateY(-0.5px);
+        box-shadow: 
+            0 3px 12px rgba(80, 60, 40, 0.08),
+            inset 0 3px 12px rgba(255, 250, 245, 0.8),
+            inset 0 -3px 6px rgba(235, 225, 210, 0.6),
+            inset 3px 0 6px rgba(248, 242, 235, 0.5),
+            inset -3px 0 6px rgba(245, 238, 230, 0.5),
+            inset 0 0 20px rgba(252, 245, 235, 0.4);
+    }
+    
+    .button:hover .shine {
+        animation-duration: 8s;
+    }
+}

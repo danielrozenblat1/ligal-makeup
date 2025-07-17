@@ -1,0 +1,159 @@
+.button {
+  font-family: 'AssistantR';
+  font-size: 1.15rem;
+  width: 300px;
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(220, 185, 150, 0.3);
+  padding: 15px 30px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  margin: 10px auto;
+  direction: rtl;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  padding: 2px;
+  background: linear-gradient(45deg, 
+    #F5E6D3 0%,      /* שמנת חמה */
+    #E6C2A6 10%,     /* בז' רך */
+    #F0E5D0 20%,     /* פנינה קרמית */
+    #D4B896 30%,     /* חום בז' זהוב */
+    #F7F0E8 40%,     /* שמנת פנינה */
+    #C8A882 50%,     /* חום קפה בלונד */
+    #F2E8DC 60%,     /* בז' פנינה */
+    #E0C097 70%,     /* חום דבש */
+    #F8F3ED 80%,     /* שמנת מוקה */
+    #DCC9A0 90%,     /* בז' זהוב עדין */
+    #F5E6D3 100%     /* שמנת חמה */
+  );
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  animation: shimmer 3s infinite linear;
+  background-size: 200% auto;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    rgba(220, 185, 150, 0) 0%,
+    rgba(220, 185, 150, 0.25) 50%,
+    rgba(220, 185, 150, 0) 100%
+  );
+  transform: skewX(-25deg) translateX(200%);
+  transition: transform 2s ease;
+  opacity: 0;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.button:hover {
+  background: rgba(210, 175, 135, 0.4);
+  box-shadow: 
+    0 8px 40px rgba(0, 0, 0, 0.15),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.button:hover::after {
+  transform: skewX(-25deg) translateX(-200%);
+  opacity: 1;
+}
+
+.button:active {
+  transform: scale(0.98) translateY(0);
+  background: rgba(200, 170, 130, 0.25);
+  box-shadow: 
+    0 2px 15px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.1s ease;
+}
+
+.text {
+  flex: 1;
+  text-align: right;
+  padding-right: 20px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.leftIcon,
+.rightIcon {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 350px) {
+  .button {
+    width: 250px;
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .leftIcon,
+  .rightIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .text {
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 351px) and (max-width: 450px) {
+  .button {
+    width: 280px;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+  }
+
+  .leftIcon,
+  .rightIcon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .text {
+    padding-right: 15px;
+  }
+}

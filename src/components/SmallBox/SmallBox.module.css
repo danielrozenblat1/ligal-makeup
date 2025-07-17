@@ -1,0 +1,180 @@
+/* SmallBox.module.css */
+.container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ margin: 12px auto;
+   background: linear-gradient(
+      125deg,
+      rgba(139, 69, 19, 0.02) 0%,
+      rgba(139, 69, 19, 0.01) 25%,
+      rgba(139, 69, 19, 0.02) 50%,
+      rgba(139, 69, 19, 0.03) 75%,
+      rgba(139, 69, 19, 0.02) 100%
+    );
+ padding: 1rem;
+ direction: rtl;
+ width: 140px;
+ height: 140px;
+ border-radius: 20px;
+ position: relative;
+ transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+ z-index: 1;
+ border: 1px solid rgba(248, 243, 229, 0.4);
+ box-shadow: 
+   0 2px 8px rgba(218, 165, 32, 0.06),
+   0 8px 24px rgba(255, 215, 0, 0.04),
+   inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.container:before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(145deg, 
+   rgba(255, 255, 255, 0.2) 0%, 
+   rgba(255, 248, 220, 0.1) 50%, 
+   rgba(255, 255, 255, 0.15) 100%);
+ backdrop-filter: blur(10px) saturate(1.2);
+ border-radius: 20px;
+ z-index: -1;
+ opacity: 0.7;
+}
+
+
+.container:hover:before {
+ opacity: 0.9;
+ backdrop-filter: blur(12px) saturate(1.4);
+}
+
+.text {
+ font-family: 'AssistantR', sans-serif;
+ font-size: 1rem;
+ direction: rtl;
+ margin-top: 0.5rem;
+ font-weight: 300;
+ text-align: center;
+ color: rgba(101, 67, 33, 0.85);
+ text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.icon {
+ width: 40%;
+ height: auto;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ opacity: 0.8;
+ filter: drop-shadow(0 2px 4px rgba(218, 165, 32, 0.15));
+ transition: all 0.3s ease;
+}
+
+.container:hover .icon {
+ opacity: 0.95;
+ filter: drop-shadow(0 3px 6px rgba(218, 165, 32, 0.2));
+ transform: scale(1.05);
+}
+
+/* אפקט זוהר עדין */
+.container:after {
+ content: '';
+ position: absolute;
+ top: -2px;
+ left: -2px;
+ right: -2px;
+ bottom: -2px;
+ background: linear-gradient(45deg, 
+   rgba(255, 215, 0, 0.1), 
+   rgba(255, 223, 0, 0.05), 
+   rgba(255, 248, 220, 0.08),
+   rgba(255, 215, 0, 0.1));
+ border-radius: 22px;
+ z-index: -2;
+ opacity: 0;
+ transition: opacity 0.3s ease;
+ filter: blur(8px);
+}
+
+.container:hover:after {
+ opacity: 0.6;
+}
+
+@media (max-width: 350px) {
+ .container {
+   width: 130px;
+   height: 130px;
+   padding: 0.75rem;
+   border-radius: 18px;
+ }
+
+ .container:before {
+   border-radius: 18px;
+ }
+
+ .container:after {
+   border-radius: 20px;
+ }
+
+ .text {
+   font-size: 0.9rem;
+   margin-top: 0.4rem;
+ }
+
+ .icon {
+   width: 35%;
+ }
+}
+
+@media (min-width: 351px) and (max-width: 450px) {
+ .container {
+   width: 135px;
+   height: 135px;
+   border-radius: 19px;
+ }
+
+ .container:before {
+   border-radius: 19px;
+ }
+
+ .container:after {
+   border-radius: 21px;
+ }
+
+ .text {
+   font-size: 0.9rem;
+   width: 100%;
+   margin-top: 0.2rem;
+ }
+
+ .icon {
+   width: 50%;
+ }
+}
+
+@media (min-width: 1051px) {
+ .container {
+   width: 180px;
+   height: 150px;
+   border-radius: 24px;
+ }
+
+ .container:before {
+   border-radius: 24px;
+ }
+
+ .container:after {
+   border-radius: 26px;
+ }
+ 
+ .text {
+   font-size: 1.1rem;
+ }
+
+ .icon {
+   width: 45%;
+ }
+}
