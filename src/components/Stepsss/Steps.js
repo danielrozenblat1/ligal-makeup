@@ -5,7 +5,7 @@ import styles from './Steps.module.css';
 import consult from "../../icons/wired-outline-981-consultation-hover-conversation-alt.json";
 import makeup from "../../icons/wired-outline-1598-makeup-hover-pinch.json"
 import bride from "../../icons/wired-outline-653-marriage-hover-pinch.json"
-
+import convo from "../../icons/wired-outline-981-consultation-hover-conversation-alt.json"
 const Steps = () => {
   const playerRef1 = useRef(null);
   const playerRef2 = useRef(null);
@@ -18,19 +18,26 @@ const stepsData = [
     icon: consult,
     playerRef: playerRef1,
     title: "שיחת ייעוץ ותיאום ציפיות",
-    description: "בשיחת הייעוץ שלנו אני אכיר את סגנון האיפור שלך, את סוג העור שלך, ואת החזון שלך ליום החתונה. זה הזמן שלנו לדבר על כל הפרטים ולוודא שאנחנו מדויקות בכל מה שחשוב לך."
+    description: "בשיחת הייעוץ שלנו אני אכיר את סגנון האיפור שלך, את סוג העור שלך, ואת החזון שלך ליום החתונה ואז נבין אם יש התאמה בין סגנון האיפור שלי למה שאת מחפשת. זה הזמן שלנו לדבר על כל הפרטים ולוודא שאנחנו מדויקות בכל מה שחשוב לך."
   },
-    {
+      {
     id: 2,
     icon: makeup,
     playerRef: playerRef2,
+    title: "איפור ניסיון (אופציונלי)*",
+    description: "יש לך את האפשרות לבוא סופר מוכנה ועם וודאות מקסימלית לחתונה שלך. אנחנו ניפגש כמה ימים לפני החתונה ונדייק עבורך ב100% את האיפור"
+  },
+    {
+    id: 3,
+    icon: convo,
+    playerRef: playerRef3,
     title: "כאן לכל מענה,חשש והתלבטות",
     description: "עד החתונה אני בטוחה שיעלו לך רעיונות חדשים, שאלות ואפילו קצת חששות מסויימים ואני כאן עבורך לכל שאלה,חשש הכי קטן והתלבטות!"
   },
   {
-    id: 3,
+    id: 4,
     icon: bride,
-    playerRef: playerRef3,
+    playerRef: playerRef4,
     title: "יום החתונה שלך",
     description: "ביום החתונה אני מגיעה אלייך עם מוצרי איפור יוקרתיים ועמידים. האיפור שלי מותאם לחזק ולהדגיש את תווי הפנים שלך, עם דגש על עמידות מקסימלית לכל אורך האירוע. האיפור יישאר מושלם עד שאת תחליטי להסיר אותו בסוף הערב."
   },
