@@ -139,11 +139,18 @@
 
 /* Media Queries מעודכנות לטלפונים */
 @media (max-width: 350px) {
+    .imageContainer {
+        justify-content: center;
+    }
     .leftImage, .rightImage {
         display: none; /* מסתיר תמונות צד במסכים קטנים */
     }
     .centerImage {
-        flex: 1; /* התמונה המרכזית תופסת את כל הרוחב */
+        flex: none;
+        width: 100%; /* רוחב מלא */
+        height: 100vh; /* מלא גובה המסך */
+        background-size: auto 100%; /* התמונה במלוא הגובה */
+        background-position: right center; /* מציג יותר מהצד הימני */
     }
     .contentBox {
         padding: 0.5rem;
@@ -156,11 +163,18 @@
 }
   
 @media (min-width: 350px) and (max-width: 549px) {
+    .imageContainer {
+        justify-content: center;
+    }
     .leftImage, .rightImage {
         display: none; /* מסתיר תמונות צד במסכי טלפון */
     }
     .centerImage {
-        flex: 1; /* התמונה המרכזית תופסת את כל הרוחב */
+        flex: none;
+        width: 100%; /* רוחב מלא */
+        height: 100vh; /* מלא גובה המסך */
+        background-size: auto 100%; /* התמונה במלוא הגובה */
+        background-position: right center; /* מציג יותר מהצד הימני */
     }
     .contentBox {
         padding: 1.5rem 0.7rem;
@@ -173,11 +187,18 @@
 }
   
 @media (min-width: 450px) and (max-width: 549px) {
+    .imageContainer {
+        justify-content: center;
+    }
     .leftImage, .rightImage {
-        display: none; /* מסתיר תמונות צד במסכי טלפון */
+        display: none;
     }
     .centerImage {
-        flex: 1; /* התמונה המרכזית תופסת את כל הרוחב */
+        flex: none;
+        width: 100%;
+        height: 100vh;
+        background-size: auto 100%;
+        background-position: right center;
     }
     .contentBox {
         padding: 1.5rem;
@@ -190,11 +211,18 @@
 }
   
 @media (min-width: 550px) and (max-width: 649px) {
+    .imageContainer {
+        justify-content: center;
+    }
     .leftImage, .rightImage {
-        display: none; /* מסתיר תמונות צד במסכים עד 650px */
+        display: none;
     }
     .centerImage {
-        flex: 1; /* התמונה המרכזית תופסת את כל הרוחב */
+        flex: none;
+        width: 100%;
+        height: 100vh;
+        background-size: auto 100%;
+        background-position: right center;
     }
     .contentBox {
         padding: 1.8rem;
@@ -208,11 +236,18 @@
 }
   
 @media (min-width: 650px) and (max-width: 750px) {
+    .imageContainer {
+        justify-content: center;
+    }
     .leftImage, .rightImage {
-        display: none; /* מסתיר תמונות צד במסכים עד 750px */
+        display: none;
     }
     .centerImage {
-        flex: 1; /* התמונה המרכזית תופסת את כל הרוחב */
+        flex: none;
+        width: 100%;
+        height: 100vh;
+        background-size: auto 100%;
+        background-position: right center;
     }
     .contentBox {
         padding: 2rem;
@@ -236,6 +271,7 @@
     }
     .centerImage {
         flex: 1.5; /* חזרה לגודל הרגיל במסכים גדולים יותר */
+        background-size: cover; /* במסכים גדולים חוזרים ל-cover */
     }
     .contentBox {
         width: 70%;
