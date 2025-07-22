@@ -150,7 +150,7 @@
         width: 100%; /* רוחב מלא */
         height: 100vh; /* מלא גובה המסך */
         background-size: auto 100%; /* התמונה במלוא הגובה */
-        background-position: right center; /* מציג יותר מהצד הימני */
+      
     }
     .contentBox {
         padding: 0.5rem;
@@ -174,7 +174,7 @@
         width: 100%; /* רוחב מלא */
         height: 100vh; /* מלא גובה המסך */
         background-size: auto 100%; /* התמונה במלוא הגובה */
-        background-position: right center; /* מציג יותר מהצד הימני */
+      
     }
     .contentBox {
         padding: 1.5rem 0.7rem;
@@ -198,7 +198,7 @@
         width: 100%;
         height: 100vh;
         background-size: auto 100%;
-        background-position: right center;
+        background-position: center;
     }
     .contentBox {
         padding: 1.5rem;
@@ -222,7 +222,7 @@
         width: 100%;
         height: 100vh;
         background-size: auto 100%;
-        background-position: right center;
+        background-position: center;
     }
     .contentBox {
         padding: 1.8rem;
@@ -247,7 +247,7 @@
         width: 100%;
         height: 100vh;
         background-size: auto 100%;
-        background-position: right center;
+        background-position: center;
     }
     .contentBox {
         padding: 2rem;
