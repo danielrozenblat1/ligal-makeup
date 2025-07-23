@@ -5,6 +5,8 @@ import bride from "../icons/wired-lineal-1587-cosmetic-brush-hover-pinch (1).jso
 import makeup from "../icons/wired-lineal-1599-powder-makeup-face-hover-pinch (1).json"
 import makeupss from "../icons/wired-lineal-3078-avatar-bride-hover-pinch (1).json"
 import confidant from "../icons/wired-lineal-653-marriage-hover-pinch.json"
+import mirror from "../icons/wired-lineal-1589-makeup-mirror-hover-pinch (1).json"
+import makeupsss from "../icons/wired-lineal-1599-powder-makeup-face-hover-pinch (1).json"
 import CustomCard from "../components/steps/Steps"
 import BenefitCard from "../components/bonuses/Bonus"
 import Steps from "../components/Stepsss/Steps"
@@ -31,6 +33,10 @@ const ThirdScreen = () => {
             <div className={styles.row}>
                 <SmallBox text="תחושת ביטחון מלאה - את יוצאת מהכיסא כשאת יודעת שאת נראית מושלם" icon={makeupss} />
                 <SmallBox text="ליווי לאולם חצי שעה לפני החופה ועד סיומה" icon={confidant} />
+            </div>
+                 <div className={styles.row}>
+                <SmallBox text="איפור ניסיון לפני החתונה כדי שתוכלי להגיע הכי רגועה ליום שלך" icon={mirror} />
+                <SmallBox text="ערכת טאצ׳אפ בוטיקית להמשך הערב" icon={makeupsss} />
             </div>
               <AboutMe/>
              <div className={styles.description}>אני בטוחה שהכל כבר יושב אצלך בדמיון (ואפילו כבר מגיל קטן) מכמות האורחים,שיר הכניסה ועד לפרטים הכי קטנים שיש</div>
