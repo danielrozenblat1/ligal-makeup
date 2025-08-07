@@ -7,7 +7,7 @@ import carpet from "../icons/wired-lineal-1871-red-carpet-hover-pinch.json"
 const SecondScreen = () => {
   return (
     <>
-       <div className={styles.title}>לא הגעת לכאן סתם</div>
+       <div className={styles.title} id="קורסים">לא הגעת לכאן סתם</div>
       <div className={styles.description}>
         הגעת לכאן כי עמוק בפנים את יודעת - את יכולה להיראות הרבה יותר טוב כשאת מתאפרת.
       </div>
