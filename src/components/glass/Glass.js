@@ -1,11 +1,36 @@
-import React from 'react';
+
+
+
+
+
+
+import React, { useEffect, useRef } from 'react';
+import { Player } from '@lordicon/react';
 import styles from './Glass.module.css';
 
-const GlassCard = ({ title, description, icon: Icon }) => {
+const GlassCard = ({ title, description, icon }) => {
+  const handleComplete = () => {
+    setTimeout(() => {
+      playerRef?.current?.playFromBeginning();
+    }, 2500);
+  };
+  
+  const playerRef = useRef(null);
+  
+  useEffect(() => {
+    playerRef?.current?.playFromBeginning();
+  }, []);
+
   return (
     <div className={styles.cardContainer}>
-      <div className={styles.iconWrapper}>
-        <Icon className={styles.icon} />
+      <div className={styles.icon}>
+      <Player 
+        icon={icon} 
+        ref={playerRef} 
+        size="100%"
+                onComplete={handleComplete}
+
+      />
       </div>
       
       <div className={styles.content}>

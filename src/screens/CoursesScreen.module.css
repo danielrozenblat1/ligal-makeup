@@ -1,0 +1,610 @@
+/* CourseCard.module.css */
+
+.courseCard {
+  direction: rtl;
+  background: linear-gradient(135deg, #ffffff 0%, #fefbf7 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  position: relative;
+}
+
+.courseCard:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.description {
+    font-family: "AssistantR", sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 1% auto;
+    max-width: 92%;
+    direction: rtl;
+    position: relative;
+    padding: 0 1rem;
+    z-index: 1;
+    transition: all 0.5s ease;
+    word-wrap: break-word;
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.courseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.courseCard:hover .courseImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.courseCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+.cardContent {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.courseTitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1f2937;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.courseDescription {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.courseInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'AssistantR', sans-serif;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+}
+
+.coursePrice {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Updated button with warmer brown tones that match the card background */
+.enrollButton {
+  background: linear-gradient(135deg, #f4e8d6 0%, #e8d4b8 100%);
+  color: #6b5b4a;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  border: 1px solid rgba(139, 115, 85, 0.2);
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(139, 115, 85, 0.15);
+  font-family: 'Assistant', sans-serif;
+}
+
+.enrollButton:hover {
+  background: linear-gradient(135deg, #e8d4b8 0%, #dcc7a4 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 115, 85, 0.25);
+  color: #5d4e37;
+}
+
+/* Container and Layout Styles */
+
+.container {
+  direction: rtl;
+  min-height: 100vh;
+  padding: 10px 16px;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.mainTitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.subtitle {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 512px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.footerSection {
+  text-align: center;
+}
+
+/* Updated view more button with cream and brown tones */
+.viewMoreButton {
+  background: linear-gradient(135deg, #8b7355 0%, #6f5f4a 100%);
+  color: #faf7f2;
+  padding: 16px 32px;
+  border-radius: 9999px;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(139, 115, 85, 0.3);
+  font-family: 'Assistant', sans-serif;
+}
+
+.viewMoreButton:hover {
+  background: linear-gradient(135deg, #6f5f4a 0%, #5d4e37 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 115, 85, 0.4);
+}
+
+/* Responsive Design - Mobile First Approach */
+
+/* מתחת ל-350px - מסכים קטנים מאוד - 2 קורסים בשורה */
+@media (max-width: 349px) {
+  .container {
+    padding: 16px 8px;
+  }
+  
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+  
+  .subtitle {
+    font-size: 0.875rem;
+  }
+  
+  .description {
+    font-size: 0.875rem;
+    margin: 3% auto;
+    max-width: 98%;
+    padding: 0 0.25rem;
+    line-height: 1.3;
+  }
+  
+  .coursesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .imageContainer {
+    height: 140px;
+  }
+  
+  .cardContent {
+    padding: 12px;
+  }
+  
+  .courseTitle {
+    font-size: 0.875rem;
+    line-height: 1.3;
+  }
+  
+  .courseDescription {
+    font-size: 0.65rem;
+    line-height: 1.4;
+  }
+  
+  .coursePrice {
+    font-size: 1rem;
+  }
+  
+  .cardFooter {
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 4px;
+  }
+  
+  .enrollButton {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 0.7rem;
+  }
+  
+  .viewMoreButton {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}
+
+/* 350px - 450px - 2 קורסים בשורה */
+@media (min-width: 350px) and (max-width: 449px) {
+  .container {
+    padding: 20px 10px;
+  }
+  
+  .mainTitle {
+    font-size: 1.875rem;
+  }
+  
+  .subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    margin: 3% auto;
+    max-width: 96%;
+    padding: 0 0.5rem;
+    line-height: 1.4;
+  }
+  
+  .coursesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .imageContainer {
+    height: 160px;
+  }
+  
+  .cardContent {
+    padding: 14px;
+  }
+  
+  .courseTitle {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+  
+  .courseDescription {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+  
+  .cardFooter {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .enrollButton {
+    width: 100%;
+    padding: 9px 16px;
+    font-size: 0.75rem;
+  }
+}
+
+/* 450px - 550px - 2 קורסים בשורה */
+@media (min-width: 450px) and (max-width: 549px) {
+  .container {
+    padding: 24px 12px;
+  }
+  
+  .mainTitle {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin: 2% auto;
+    max-width: 95%;
+    padding: 0 0.5rem;
+    line-height: 1.4;
+  }
+  
+  .coursesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  
+  .imageContainer {
+    height: 180px;
+  }
+  
+  .cardContent {
+    padding: 16px;
+  }
+  
+  .courseTitle {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  
+  .courseDescription {
+    font-size: 0.8rem;
+  }
+  
+  .cardFooter {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .enrollButton {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}
+
+/* 550px - 650px */
+@media (min-width: 550px) and (max-width: 649px) {
+  .container {
+    padding: 28px 14px;
+  }
+  
+  .mainTitle {
+    font-size: 2.125rem;
+  }
+  
+  .subtitle {
+    font-size: 1.05rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    margin: 2% auto;
+    max-width: 94%;
+    padding: 0 0.75rem;
+    line-height: 1.5;
+  }
+  
+  .coursesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 26px;
+  }
+  
+  .cardContent {
+    padding: 22px;
+  }
+  
+  .courseTitle {
+    font-size: 1.2rem;
+  }
+  
+  .cardFooter {
+    flex-direction: row;
+    gap: 16px;
+  }
+  
+  .enrollButton {
+    width: auto;
+  }
+}
+
+/* 650px - 750px */
+@media (min-width: 650px) and (max-width: 749px) {
+  .container {
+    padding: 32px 16px;
+  }
+  
+  .mainTitle {
+    font-size: 2.25rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    margin: 1.5% auto;
+    max-width: 93%;
+    padding: 0 0.875rem;
+  }
+  
+  .coursesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+  }
+  
+  .cardContent {
+    padding: 24px;
+  }
+  
+  .courseTitle {
+    font-size: 1.25rem;
+  }
+}
+
+/* 750px - 850px */
+@media (min-width: 750px) and (max-width: 849px) {
+  .container {
+    padding: 36px 18px;
+  }
+  
+  .mainTitle {
+    font-size: 2.375rem;
+  }
+  
+  .subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .description {
+    font-size: 1.25rem;
+    margin: 1.5% auto;
+    max-width: 92%;
+    padding: 0 0.9rem;
+  }
+  
+  .coursesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/* 850px - 950px */
+@media (min-width: 850px) and (max-width: 949px) {
+  .container {
+    padding: 40px 20px;
+  }
+  
+  .mainTitle {
+    font-size: 2.4rem;
+  }
+  
+  .description {
+    font-size: 1.3rem;
+    margin: 1% auto;
+    max-width: 92%;
+    padding: 0 0.95rem;
+  }
+  
+  .coursesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+/* 950px - 1050px */
+@media (min-width: 950px) and (max-width: 1049px) {
+  .container {
+    padding: 42px 22px;
+  }
+  
+  .mainTitle {
+    font-size: 2.45rem;
+  }
+  
+  .description {
+    font-size: 1.35rem;
+    margin: 1% auto;
+    max-width: 92%;
+    padding: 0 1rem;
+  }
+  
+  .coursesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+/* 1050px - 1150px */
+@media (min-width: 1050px) and (max-width: 1149px) {
+  .container {
+    padding: 44px 24px;
+  }
+  
+  .mainTitle {
+    font-size: 2.47rem;
+  }
+  
+  .description {
+    font-size: 1.37rem;
+    margin: 1% auto;
+    max-width: 92%;
+  }
+  
+  .coursesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+/* 1150px - 1250px */
+@media (min-width: 1150px) and (max-width: 1249px) {
+  .container {
+    padding: 46px 26px;
+  }
+  
+  .mainTitle {
+    font-size: 2.48rem;
+  }
+  
+  .description {
+    font-size: 1.38rem;
+    margin: 1% auto;
+    max-width: 92%;
+  }
+  
+  .coursesGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+/* 1250px ומעלה */
+@media (min-width: 1250px) {
+  .container {
+    padding: 10px 16px;
+  }
+  
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+  
+  .description {
+    font-size: 1.4rem;
+    margin: 1% auto;
+    max-width: 92%;
+    padding: 0 1rem;
+  }
+  
+  .coursesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

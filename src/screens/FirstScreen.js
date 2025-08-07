@@ -47,12 +47,12 @@ const FirstScreen = () => {
       
       <div className={styles.contentBox}>
         <h1 className={styles.title}>LIGAL GERBI</h1>
-  <div className={styles.description}>איפור כלות || איפור ערב</div>
-        {/* <div className={styles.buttonContainer}>
+  {/* <div className={styles.description}>איפור כלות || איפור ערב</div> */}
+        <div className={styles.buttonContainer}>
         <PinkScrollButton text="למידע על הקורסים" icon={learn} to="קורסים"/>
         <PinkScrollButton text="למידע על איפור כלות" icon={marrige} to="כלות"/>
  
-        </div> */}
+        </div>
       </div>
     </div>
   );

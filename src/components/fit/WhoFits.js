@@ -1,64 +1,87 @@
-import React, { useEffect } from 'react';
-import { Check } from 'lucide-react';
-import Button from '../button/Button';
-import styles from "./WhoFits.module.css";
+import React from 'react';
+import { 
+  Heart, 
+  Home, 
+  Users, 
+  Star, 
+  TrendingUp,
+  Baby,
+  BookOpen,
+  Target,
+  MessageCircle
+} from 'lucide-react';
+import styles from "./WhoFits.module.css"
 
-const WhoFits = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(styles.animateFadeIn);
-        }
-      });
-    });
-
-    document.querySelectorAll(`.${styles.revealItem}`).forEach((item) => {
-      observer.observe(item);
-    });
-
-    return () => observer.disconnect();
-  }, []);
+const ParentalGuidanceScreen = () => {
+  const handleScrollToCourses = () => {
+    const element = document.getElementById('רשימת הקורסים');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const items = [
-    "את מרגישה שיש לך פונטנציאל גדול יותר מלהשאר רק כשכירה",
-    "את מבינה שאת זקוקה לכלים וידע כדי להצליח",
-"תמיד אהבת את עולם הביוטי ואת מרגישה שיש לך הרבה מה לתת",
-"את מוכנה להשקיע ולהתמסר כדי לראות תוצאות",
+    {
+      text: "את מאפרת שרוצה לחדד את עצמך בתחום ולרכוש טכניקות חדשות",
+      icon: <Star className={styles.icon} />
+    },
+    {
+      text: "את רוצה ללמוד לאפר את עצמך מהבסיס - גם בלי שום ידע קודם",
+      icon: <BookOpen className={styles.icon} />
+    },
+    {
+      text: "את רוצה להתאפר יפה יותר ולא לקחת מאפרת לכל אירוע קטן שיש לך",
+      icon: <Heart className={styles.icon} />
+    },
+    {
+      text: "את מרגישה שהיום את לא מצליחה להוציא את עצמך הכי יפה מול המראה",
+      icon: <Target className={styles.icon} />
+    },
+    {
+      text: "את מאפרת שסיימה לימודים ועדיין מרגישה שאת לא מיוחדת ואין משהו שמייחד אותך",
+      icon: <TrendingUp className={styles.icon} />
+    },
+    {
+      text: "את לא מפחדת מהשקעה, תרגול ומהדיגיטל",
+      icon: <MessageCircle className={styles.icon} />
+    },
+    {
+      text: "את רוצה לשפר איפור באופן נקודתי ולחדד חלקים ספציפיים",
+      icon: <Users className={styles.icon} />
+    },
   ];
 
   return (
-    <div className={styles.container}>
-      <div className={styles.content}>
-        {/* Title section */}
-        <div className={styles.titleWrapper}>
-
-          <h1 className={styles.title}>איך תדעי שאת מתאימה לתכנית הקורסים שלי?</h1>
-        </div>
-
-        {/* Items */}
-        <div className={styles.itemsGrid}>
-          {items.map((item, index) => (
-            <div key={index} className={`${styles.revealItem}`}>
-              <div className={styles.card}>
-                <div className={styles.checkmarkWrapper}>
-                  <Check className={styles.checkIcon} />
-                </div>
-                <div className={styles.textWrapper}>
-                  <p className={styles.itemText}>{item}</p>
+    <>
+      <div className={styles.container}>
+        <div className={styles.backgroundImage} />
+        
+        <div className={styles.content}>
+          <h1 className={styles.title}>הקורסים מתאימים לך אם</h1>
+          
+          <div className={styles.cardsGrid}>
+            {items.map((item, index) => (
+              <div key={index} className={styles.card}>
+                <div className={styles.cardContent}>
+                  <span className={styles.cardText}>{item.text}</span>
+                  {item.icon}
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Button */}
-        <div className={styles.buttonWrapper}>
-          <Button text="סוזנה אני מתאימה!"/>
+          <div className={styles.buttonContainer}>
+            <button 
+              onClick={handleScrollToCourses}
+              className={styles.coursesButton}
+            >
+          ליגל,קחי אותי לרשימת הקורסים
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default WhoFits;
+export default ParentalGuidanceScreen;
