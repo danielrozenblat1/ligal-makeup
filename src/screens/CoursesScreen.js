@@ -1,4 +1,3 @@
-// MakeupCoursesGallery.jsx
 import React from 'react';
 import styles from './CoursesScreen.module.css';
 import WAButton from '../components/WAButton/Button';
@@ -18,7 +17,11 @@ import smokyEyesSecrets from '../images/עיניים מעושנות וכל הס�
 import professionalPhotography from '../images/צילום מקצועי.png';
 import fullMakeupCourse from '../images/קורס איפור מלא.png';
 
-const CourseCard = ({ image, title, description }) => {
+const CourseCard = ({ image, title, description, link }) => {
+  const handleClick = () => {
+    window.open(link, '_blank');
+  };
+
   return (
     <div className={styles.courseCard}>
       <div className={styles.imageContainer}>
@@ -31,16 +34,10 @@ const CourseCard = ({ image, title, description }) => {
       </div>
       
       <div className={styles.cardContent}>
-        <h3 className={styles.courseTitle}>
-          {title}
-        </h3>
-        
-        <p className={styles.courseDescription}>
-          {description}
-        </p>
-    
+        <h3 className={styles.courseTitle}>{title}</h3>
+        <p className={styles.courseDescription}>{description}</p>
         <div className={styles.cardFooter}>
-          <button className={styles.enrollButton}>
+          <button className={styles.enrollButton} onClick={handleClick}>
             הרשמה לקורס
           </button>
         </div>
@@ -54,80 +51,80 @@ const MakeupCoursesGallery = () => {
     {
       image: learnedMakeupHowToStart,
       title: "למדתי איפור - איך מתחילים לעבוד בזה",
-      description: "אני כאן כדי לעשות לכן קצת סדר בבלאגן. אחרי כמה שנים שלמדתי על בשרי איך ממלאים יומן, אני הולכת להסביר לכן בצורה מתומצתת מה תכלס אתן הולכות לעשות היום כדי למלא את היומן שלכן בלקוחות",
-  
+      description: "אני כאן כדי לעשות לכן קצת סדר בבלאגן...",
+      link: "https://my.schooler.biz/s/99216/1754247078094"
     },
     {
       image: fullMakeupCourse,
       title: "איפור מלא מ0 ל100",
-      description: "אם את מאפרת שלא רוצה להישאר מאחור ואוהבת להרחיב את הידע שלה בואי למוד סגנון איפור עיניים חדש פשוט ומושלם. ואם את לא מאפרת, ורוצה ללמוד איפור חתולי ומלוכסן שמחמיא לכל סוגי העיניים - לא תאמיני כמה קל לאפר את העיניים שלך בלי להיות תלוייה באף אחת ומבלי להוציא אלפי שקלים בשנה",
-   
+      description: "אם את מאפרת שלא רוצה להישאר מאחור...",
+      link: "https://my.schooler.biz/s/99225/1754250546088"
     },
     {
       image: lipMakeup,
       title: "איפור שפתיים",
-      description: "אחרי השיעור הזה תדעו איך לתחום את השפתיים בצורה נכונה, איך להחליק אותן ולגרום לאיפור לשבת בצורה עמידה על השפתיים",
-   
+      description: "אחרי השיעור הזה תדעו איך לתחום את השפתיים...",
+      link: "https://my.schooler.biz/s/99224/1754250319577"
     },
     {
       image: eyebrowMakeup,
       title: "איפור גבות",
-      description: "אחרי השיעור הזה תלמדו לאפר את הגבות בצורה טבעית, איך לעבות אותן בצורה נכונה שמחמיאה לגבות ולא הופכת אותן למוגזמות",
-   
+      description: "אחרי השיעור הזה תלמדו לאפר את הגבות...",
+      link: "https://my.schooler.biz/s/99223/1754250110177"
     },
     {
       image: perfectBase,
       title: "בסיס מושלם לאיפור",
-      description: "איפור מעולה מתחיל בבסיס מצויין. בואו ללמוד אחת ולתמיד איך מכינים את העור לפני המייקאפ ואיך יוצרים כיסוי מושלם וחלק שמסתיר הכול ולא מכביד",
-  
+      description: "איפור מעולה מתחיל בבסיס מצויין...",
+      link: "https://my.schooler.biz/s/99214/1754246650041"
     },
     {
       image: simpleMakeupForAll,
       title: "איפור פשוט לכל מטרה",
-      description: "בשיעור הבא אני מראה לכן איך אני מאפרת את עצמי איפור פשוט שמתאים לכל מטרה",
-
+      description: "איך אני מאפרת את עצמי איפור פשוט שמתאים לכל מטרה",
+      link: "https://my.schooler.biz/s/99215/1754246890078"
     },
     {
       image: wetContouring,
       title: "הצללות רטובות",
-      description: "בשיעור הזה נלמד איך לעשות הצללות והארות בצורה נכונה, איך לחטב את הפנים ולתת להן מראה מורם",
-
+      description: "איך לעשות הצללות והארות בצורה נכונה...",
+      link: "https://my.schooler.biz/s/99220/1754249340842"
     },
     {
       image: contourAndBlush,
       title: "הצללות וסומק",
-      description: "אחרי שמרחנו מייקאפ בצורה מושלמת - כל הפנים שלנו בגוון אחד, ועכשיו נחזיר את הגוונים הטבעיים של הפנים שלנו באמצעות ברונזר סומק ושימר",
-  
+      description: "נחזיר את הגוונים הטבעיים של הפנים שלנו...",
+      link: "https://my.schooler.biz/s/99222/1754249669185"
     },
     {
       image: eyelashApplication,
       title: "הדבקת ריסים ב-3 צורות",
-      description: "לא סתם יש הדבקות ריסים שהן יפות ויש הדבקות ריסים שהן ווואווו. תתכונני ללמוד את השיטה הכי יפה והכי פשוטה להדבקת ריסים שאין אחד שיכול לעמוד בפניהן",
-    
+      description: "תלמדי את השיטה הכי פשוטה להדבקת ריסים...",
+      link: "https://my.schooler.biz/s/99193/1754224095499"
     },
     {
       image: smokyEyesSecrets,
       title: "עיניים מעושנות וכל הסודות שלי למראה מורם",
-      description: "אם את מאפרת שלא רוצה להישאר מאחור ואוהבת להרחיב את הידע שלה בואי למוד סגנון איפור עיניים חדש פשוט ומושלם. ואם את לא מאפרת, ורוצה ללמוד איפור חתולי ומלוכסן שמחמיא לכל סוגי העיניים - לא תאמיני כמה קל לאפר את העיניים שלך בלי להיות תלוייה באף אחת ומבלי להוציא אלפי שקלים בשנה",
-   
+      description: "איפור חתולי ומלוכסן שמחמיא לכל סוגי העיניים...",
+      link: "https://my.schooler.biz/s/99075/1753973261983"
     },
     {
       image: classicEyeMakeup,
       title: "איפור עיניים קלאסי בארבע צורות",
-      description: "כולן מסתבכות עם איפור עיניים, בואו תראו כמה זה פשוט... 4 צורות לאפר את העיניים בצורה הכי קלה שיש",
-   
+      description: "4 צורות לאפר את העיניים בצורה הכי קלה שיש",
+      link: "https://my.schooler.biz/s/99210/1754245928309"
     },
     {
-      image: makeupAndProfessional, // משתמש באיפור ומקצועה עבור איילינר מסקרה
+      image: makeupAndProfessional,
       title: "איילינר, מסקרה ומעגל ריסים בשיטה מנצחת",
-      description: "ככל שתתרגלו יותר זה יבוא לכם יותר בקלות",
-    
+      description: "ככל שתתרגלי יותר זה יבוא לך בקלות",
+      link: "https://my.schooler.biz/s/99213/1754246412748"
     },
     {
       image: professionalPhotography,
       title: "צילום מקצועי",
-      description: "את לא חייבת מצלמה מקצועית כדי להוציא תמונות ברמה. הכול עניין של זוויות ותאורה... אחרי סרטון של פחות מ3 דקות כל אחת הולכת להוציא תמונות ברמה הכי גבוהה שיש אך ורק מהאייפון",
-   
+      description: "זוויות ותאורה נכונה מהאייפון בלבד...",
+      link: "https://my.schooler.biz/s/99021/1753946389246"
     }
   ];
 
@@ -135,9 +132,8 @@ const MakeupCoursesGallery = () => {
     <div className={styles.container} id="רשימת הקורסים">
       <div className={styles.wrapper}>
         <div className={styles.header}>
-       
           <p className={styles.description}>
-        יש לך את האפשרות לבחור בכל פרק בנפרד וכמובן לבחור את הקורס המלא לקבל את כל הידע שלי במרוכז
+            יש לך את האפשרות לבחור בכל פרק בנפרד וכמובן לבחור את הקורס המלא לקבל את כל הידע שלי במרוכז
           </p>
         </div>
         
