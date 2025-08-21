@@ -9,13 +9,12 @@ const SecondScreen = () => {
     <>
        <div className={styles.title} id="קורסים">לא הגעת לכאן סתם</div>
       <div className={styles.description}>
-        הגעת לכאן כי עמוק בפנים את יודעת - את יכולה להיראות הרבה יותר טוב כשאת מתאפרת.
+       כמה פעמים הייתה לך פגישה , אירוע או סתם יציאה שלא באמת מצריכה מאפרת ורצית להראות בשיא שלך?
+גם אם אין לך שום ידע או ניסיון את יכולה לעשות את זה בעצמך .
+ולמאפרות שבנינו , תתכוננו לגרוף מחמאות בלתי פוסקות על הטכניקות החדשות שתלמדו כאן
       </div>
 
-      <div className={styles.description}>
-        אולי את כבר <span className={styles.highlight}>מאפרת</span> ורוצה סוף סוף להרגיש בטוחה בטכניקה שלך… ואולי את פשוט רוצה לדעת איך לאפר את עצמך בצורה מושלמת,{" "}
-        <span className={styles.highlight}>גם אם אין לך שום רקע או ניסיון</span>.
-      </div>
+  
       
       <div className={styles.description}>
         <span className={styles.highlightSpecial}>אחרי כמעט עשור בתחום האיפור אני אומרת לך בפה מלא שזה אפשרי!</span>

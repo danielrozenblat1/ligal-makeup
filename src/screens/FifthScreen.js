@@ -1,4 +1,6 @@
 import ParentalGuidanceScreen from "../components/fit/WhoFits"
+import Recommendations from "../components/recommends/Recommends"
+import Recs from "../components/recommends/Recs"
 import WAButton from "../components/WAButton/Button"
 import MakeupCoursesGallery from "./CoursesScreen"
 import styles from "./FifthScreen.module.css"
@@ -12,6 +14,7 @@ const FifthScreen = () => {
       </div>
   <div className={styles.title}>כדי לאפר כל אזור בצורה מושלמת</div>
 <MakeupCoursesGallery/>
+<Recommendations/>
     <ParentalGuidanceScreen/>
     </>
   )
