@@ -51,25 +51,25 @@ const MakeupCoursesGallery = () => {
     {
       image: learnedMakeupHowToStart,
       title: "למדתי איפור - איך מתחילים לעבוד בזה",
-      description: "אני כאן כדי לעשות לכן קצת סדר בבלאגן...",
+      description: "הגיע הזמן להפוך את התחביב למקצוע",
       link: "https://my.schooler.biz/s/99216/1754247078094"
     },
     {
       image: fullMakeupCourse,
       title: "איפור מלא מ0 ל100",
-      description: "אם את מאפרת שלא רוצה להישאר מאחור...",
+      description: "הקורס המלא - כולל את כל הפרקים",
       link: "https://my.schooler.biz/s/99225/1754250546088"
     },
     {
       image: lipMakeup,
       title: "איפור שפתיים",
-      description: "אחרי השיעור הזה תדעו איך לתחום את השפתיים...",
+      description: "תחימת שפתיים והחלקת שפתיים",
       link: "https://my.schooler.biz/s/99224/1754250319577"
     },
     {
       image: eyebrowMakeup,
       title: "איפור גבות",
-      description: "אחרי השיעור הזה תלמדו לאפר את הגבות...",
+      description: "איך לאפר את הגבות בצורה טבעית",
       link: "https://my.schooler.biz/s/99223/1754250110177"
     },
     {
@@ -133,7 +133,9 @@ const MakeupCoursesGallery = () => {
       <div className={styles.wrapper}>
         <div className={styles.header}>
           <p className={styles.description}>
-            יש לך את האפשרות לבחור בכל פרק בנפרד וכמובן לבחור את הקורס המלא לקבל את כל הידע שלי במרוכז
+            <strong>בניגוד לשאר הקורסים הדיגיטלים</strong> <br/>
+יש לך את האפשרות לרכוש כל פרק בנפרד 
+וכמובן לקחת את הקורס המלא בעלות יותר משתלמת ( איפור מלא מ0 ל100)
           </p>
         </div>
         
