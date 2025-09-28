@@ -3,7 +3,7 @@ import styles from './CoursesScreen.module.css';
 import WAButton from '../components/WAButton/Button';
 
 // אימפורט תמונות
-import makeupAndProfessional from '../images/איפור שפתיים.png';
+import makeupAndProfessional from '../images/ליגל תמונה מתוקנת.png';
 import eyebrowMakeup from '../images/איפור גבות.png';
 import classicEyeMakeup from '../images/איפור עיניים קלאסי.png';
 import simpleMakeupForAll from '../images/איפור פשוט לכל מטרה.png';
