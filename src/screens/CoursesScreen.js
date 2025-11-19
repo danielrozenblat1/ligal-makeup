@@ -17,7 +17,7 @@ import smokyEyesSecrets from '../images/עיניים מעושנות וכל הס�
 import professionalPhotography from '../images/צילום מקצועי.png';
 import fullMakeupCourse from '../images/קורס איפור מלא.png';
 
-const CourseCard = ({ image, title, description, link }) => {
+const CourseCard = ({ image, title, description, link, buttonText }) => {
   const handleClick = () => {
     window.open(link, '_blank');
   };
@@ -38,7 +38,7 @@ const CourseCard = ({ image, title, description, link }) => {
         <p className={styles.courseDescription}>{description}</p>
         <div className={styles.cardFooter}>
           <button className={styles.enrollButton} onClick={handleClick}>
-            הרשמה לקורס
+            {buttonText || "הרשמה לקורס"}
           </button>
         </div>
       </div>
@@ -58,7 +58,8 @@ const MakeupCoursesGallery = () => {
       image: fullMakeupCourse,
       title: "איפור מלא מ0 ל100",
       description: "הקורס המלא - כולל את כל הפרקים",
-      link: "https://my.schooler.biz/s/99225/1754250546088"
+      link: "https://my.schooler.biz/s/99225/1754250546088",
+      buttonText: "לרכישת הקורס המלא"
     },
     {
       image: lipMakeup,
